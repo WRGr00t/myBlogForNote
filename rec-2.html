@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Как создать Spring-приложение с авторизацией</title>
+</head>
+<body>
+<header>
+    <p> Блог </p>
+    <nav>
+        <a href="index.html">На главную</a>
+    </nav>
+</header>
+<main>
+    <p>Будем использовать следующие инструменты, технологии и приложения:</p>
+    <ul>
+        <li><b>Spring Security 5</b> - основа безопасности через аутентификацию и авторизацию пользователей.</li>
+        <li><b>Spring MVC</b> - фреймворк, который обеспечивает архитектуру паттерна Model — View — Controller
+            (Модель — Вид) — Контроллер)</li>
+        <li><b>Spring ORM</b> - технология Object-Relational Mapping - Hibernate преобразует данные БД из реляционного
+            вида в объектный для чтения и обратно — для записи, позволяет легко настроить подключение к СУБД и
+            управлять транзакциями.
+        </li>
+        <li><b>Hibernate</b> - объектно-реляционная модель описывает отношения между программными объектами и записями в БД.</li>
+        <li><b>c3p0</b> — библиотека для создания пулов соединений. В библиотеке реализована поддержка кэширования запросов,
+             которая позволяет автоматически переиспользовать prepared statements, увеличивая производительность.</li>
+        <li><b>Java Servlet API</b> - основа клиент-серверной работы приложения. Сервлет — это класс, который умеет
+            получать запросы от клиента и возвращать ему ответы</li>
+    </ul>
+    <p>Список зависимостей:</p>
+    <ul>
+        <li>spring-security-web</li>
+        <li>spring-security-config</li>
+        <li>spring-webmvc</li>
+        <li>spring-orm</li>
+        <li>hibernate-core</li>
+        <li>hibernate-c3p0</li>
+        <li>c3p0</li>
+        <li>mysql-connector-java</li>
+        <li>javax.servlet-api</li>
+        <li>javax.servlet.jsp-api</li>
+        <li>javax.servlet.jsp.jstl-api</li>
+        <li>standard(taglibs)</li>
+        <li>jaxb-api</li>
+    </ul>
+    <p>Создаем базу с пользователями и указанием ролей (полномочий).</p>
+    <aside>
+        Здесь могла быть ваша реклама).
+    </aside>
+</main>
+<footer>
+    Подвал сайта
+</footer>
+</body>
+</html>
