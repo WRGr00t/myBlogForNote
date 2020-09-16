@@ -5,7 +5,7 @@ body {
   font-family: "Arial", sans-serif;
   color: #222222;
 
-  background: #ffffff url("img/bg-page.png") no-repeat top center;
+  background: #ffffff;
 }
 
 h1 {
@@ -51,6 +51,10 @@ time {
 a[href] {
   color: #0099ef;
   text-decoration: underline;
+}
+
+.subpage {
+background: #ffffff url("img/bg-page.png") no-repeat top center;
 }
 
 .avatar {
