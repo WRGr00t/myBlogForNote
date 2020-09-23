@@ -55,8 +55,25 @@
         учетные данные, настройки Hibernate и C3PO.</p>
     <p>Внедряем настройки доступа через бин LocalSessionFactoryBean для создания HibernateTransactionManager и
         Hibernate SessionFactory.</p>
-    <p>Создаем слой DAO - репозиторий для хранения и поиска сущностей БД.</p>
+    <p>Создаем слой DAO - репозитории для хранения и поиска сущностей БД (пока только пользователи).</p>
+    <p>Создаем класс реализующий UserDetailsService. Его основная задача - найти по имени и загрузить пользователя и
+        его атрибуты. UserDetails подготавливается классом UserBuilder.</p>
     <p>Конфигурация доступа к страницам приложения через класс, расширяющий класс WebSecurityConfigurerAdapter.</p>
+    <p>Далее нужны магические манипуляции с классом <i>SecurityWebApplicationInitializer</i>, который расширяет
+        абстрактный класс <i>AbstractSecurityWebApplicationInitializer</i>. Этот класс обеспечит загрузку
+        конфигурации Spring Security Config во время запуска приложения.</p>
+    <p>На данном этапе мы достигли базовой реализации Spring Security. При такой реализации Spring Security
+        по умолчанию будет требовать аутентификации для всех запросов и маршрутов.</p>
+    <p>После настройки безопасности нужно настроить представления (вьюшки) для каждого адреса MVC-приложения. </p>
+    <p>Класс WebConfig - реализация класса WebMvcConfigurer. В нем определяется методом configureViewResolvers папка
+        размещения вьюшек (префикс) и их тип (суффикс). Там же можно определить какая вьюшка к какому адресу привязана
+        через метод addViewControllers(ViewControllerRegistry registry).</p>
+    <p>DispatcherServlet или диспетчер сервлета инициализируется через класс MvcWebApplicationInitializer,
+        расширяющий класс AbstractAnnotationConfigDispatcherServletInitializer.</p>
+    <p>Теперь создаем контроллеры на каждый адрес интерфейса.</p>
+    <p>Для каждой вьюшки нужна реализация через шаблонизаторы - Thymeleaf, Mustache, <a href="subPage-1.html">Jasper</a>
+        (<i>JSP</i> - нечто большее, чем просто шаблонизатор) и др.</p>
+    <p>Последним этапом создаем SpringApplication, запускающий приложение.</p>
 
     <aside>
         Здесь могла быть ваша реклама).

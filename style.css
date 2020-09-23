@@ -88,6 +88,10 @@ background: #ffffff url("img/bg-page.png") no-repeat top center;
   color: #ffffff;
 }
 
+.jsp-page {
+  background: #ffffff url("img/jsp_logo.png") no-repeat top center;
+}
+
 .skills dd {
   margin: 0;
   margin-bottom: 10px;
