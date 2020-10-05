@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Загрузка данных в Spring-приложение из конфигурационного файла.</title>
+</head>
+<body>
+<header class="page-header">
+    <p> Блог </p>
+    <nav>
+        <a href="index.html">На главную</a>
+    </nav>
+</header>
+<main class="container">
+    <p>Данные, которые меняются редко (копирайт, контакты и пр. статичные данные) можно размещать в конфигурационном
+        файле .properties или .yml</p>
+    <ul>
+        <li>Записываем в файл конфигурации наши данные в формате Ключ=Значение</li>
+        <li>В классе, куда необходимо загрузить данные из файла, соответствующим полям прописываем аннотации следующего
+            вида:<br>
+            <code>@Value("${<i>cfg.example</i>}")</code>, где <i>cfg.example</i> - тот самый ключ из файла.
+        </li>
+        <li>Для изменения имен полей JSON-файла при сериализации в библиотеке Jackson используются анотации
+            <code>@JsonProperty("<i>новое_значение</i>")</code></li>
+    </ul>
+
+    <aside>
+        Здесь могла быть ваша реклама).
+    </aside>
+</main>
+<footer>
+    Подвал сайта
+</footer>
+</body>
+</html>
